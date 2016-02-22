@@ -6,6 +6,10 @@ Simple slider of any content for Volt framework.
 
 .slider-viewport with fixed width and overflow: hidden, inside it .slider-container with much longer width, it's moving inside .slider-viewport by jquery.animate on it's left property
 
+## Changelog
+
+0.2.0 Added prev/next buttons
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -57,7 +61,7 @@ defaults:
     css_visible_width: 800
     css_visible_height: 260px
     css_container_length: 9999
-
+    show_prev_next_icons: true
 
 ## Contributing
 

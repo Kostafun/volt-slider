@@ -7,3 +7,36 @@
   left: 0px
   height: 100%
 
+.icon
+  display: inline-block
+  width: 1em
+  height: 1em
+  fill: currentColor
+  opacity: 0.1
+  z-index: 999
+  transition: opacity .25s ease-in-out
+  -moz-transition: opacity .25s ease-in-out
+  -webkit-transition: opacity .25s ease-in-out
+
+.slider-viewport:hover .icon
+  opacity: 0.9
+
+.icon-circle-right:hover, .icon-circle-left:hover
+  cursor: pointer
+
+.icon-circle-right
+  position: absolute
+  right: 0px
+  font-size: 32px
+  color: black
+  background-size: contain
+  background-image: asset-url("../images/circle-right.png")
+
+.icon-circle-left
+  position: absolute
+  left: 0px
+  font-size: 32px
+  color: black
+  background-size: contain
+  background-image: asset-url("../images/circle-left.png")
+

@@ -1,8 +1,12 @@
-
 <:Body>
   <div class="slider-viewport" style="height: {{ @css_visible_height }}px; width: {{ @css_visible_width }}px;">
-    <div class="slider-container" style="width: {{ @css_container_length }}px;">
+    {{ if show_icons? }}
 
+        <span class="icon icon-circle-right" style="top: {{ @css_visible_height.to_i / 2 }}px;"  e-click="move"></span>
+        <span class="icon icon-circle-left" style="top: {{ @css_visible_height.to_i / 2 }}px;"  e-click="prev"></span>
+
+    {{ end }}
+    <div class="slider-container" style="width: {{ @css_container_length }}px;">
 
       {{ yield }}
 
