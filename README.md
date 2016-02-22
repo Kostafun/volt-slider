@@ -2,7 +2,9 @@
 
 Simple slider of any content for Volt framework.
 
-Includes Interval module in lib/ , encapsulating javascript setInterval clearInterval functions.
+## How it works
+
+.slider-viewport with fixed width and overflow: hidden, inside it .slider-container with much longer width, it's moving inside .slider-viewport by jquery.animate on it's left property
 
 ## Installation
 
