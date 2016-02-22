@@ -9,10 +9,12 @@ module Slider
         def default_options
           {
             interval_time: 3000,       #interval between moves in ms
-            move_length:  800,    #in pixels
             transition_time: 700,
             leftmost_point: -1600,     #if container moved farther than that it's reset to zero - showing first slide
-            stop_on_mouseover: true
+            stop_on_mouseover: true,
+            css_visible_width: 800,
+            css_visible_height: 260,
+            css_container_length: 9999
           }
         end
 
@@ -29,8 +31,8 @@ module Slider
         def move
           if RUBY_PLATFORM == 'opal'
             el = Element.find('.slider-container')
-            moveto = el.css('left').to_i - @move_length.to_i
-            if moveto < @leftmost_point
+            moveto = el.css('left').to_i - @css_visible_width.to_i
+            if moveto < @leftmost_point.to_i
               moveto = 0
             end
             el.animate({left: moveto, speed: @transition_time })

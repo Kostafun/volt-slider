@@ -45,23 +45,18 @@ css:
     }
 
 ## Configuration
-Sass variables
-
-defaults:
-
-    $slider_visible_width:'800px' !default
-    $slider_visible_height: '260px' !default
-    $slider_container_length: '2400px' !default
 
 Attributes
 
 defaults:
 
     interval_time: 3000,       #interval between moves in ms
-    move_length:  800,    #in pixels
     transtion_time: 700,
     leftmost_point: -1600,     #if container moved farther than that it's reset to zero - showing first slide
     stop_on_mouseover: true
+    css_visible_width: 800
+    css_visible_height: 260px
+    css_container_length: 9999
 
 
 ## Contributing
